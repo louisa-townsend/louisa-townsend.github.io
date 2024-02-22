@@ -1,0 +1,24 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Welsh GDP",
+  "title": {
+    "text": "Welsh GDP by Sector",
+    "subtitle": "Source ONS.",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "plum"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/louisa-townsend/louisa-townsend.github.io/main/quarterlygdp2022q3.csv"
+  },
+  "transform": [{"filter": "datum.Region == 'Wales'"}],
+  "mark": {"type": "bar", "color": "#947EB0", "strokeWidth": 2, "opacity": 1},
+  "height": 300,
+  "width": 250,
+  "encoding": {
+    "y": {"field": "Sector", "type": "ordinal", "sort": [], "title": null},
+    "x": {"field": "Value", "type": "quantitative", "title": null}
+  },
+  "config": {}
+}
